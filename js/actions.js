@@ -1,9 +1,23 @@
 var fn = {
-    init: function () {
+    ready: function(){
+        
+        document.addEventListener('deviceready',fn.init,false);        
+    },
+    init: function(){
         var x = false;
-        if (!x)
+        if(!x)
             window.location.href = "#registro";
-    }
+        $('#registro a:eq(1)').tap(fn.registrar);
+    },
+    registrar: function(){
+        var nom = $('#registro input:eq(0)').val();
+        var mail = $('#registro input:eq(1)').val();
+        var tel = $('#registro input:eq(2)').val();
+        
+        if(nom != '' && mail != '' && tel != '')
+             alert(nom + ' - ' + mail + ' - ' + tel);
+        else
+           navigator.notificaction.alert ('Todos los campos son requeridos' null, 'Error de Datos', 'Aceptar');
+    }    
 };
-
-window.addEventListener ("load",fn.init,false);
+$(fn.ready);

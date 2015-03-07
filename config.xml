@@ -1,0 +1,24 @@
+ <?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "mx.cenet.hotelapp"
+        version     = "0.0.1"
+        versionCode = "10" >
+
+        <!-- versionCode is optional and Android only -->
+
+        <preference name="phonegap-version" value="3.6.3" />
+
+        <name>Hotel App</name>
+
+        <description>
+        Reservaciones de hoteles buena onda
+        </description>
+
+        <author href="http://woorx.mx" email="carlo5@woorx.mx">
+        Carlos Ramírez
+        </author>
+        <gap:plugin name="org.apache.cordova.dialogs" />
+
+    </widget>
